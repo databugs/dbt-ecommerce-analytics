@@ -4,6 +4,7 @@ WITH source AS (
     SELECT * 
     FROM {{ source('raw_data', 'product_category') }}
 )
-
-select *
-from source_data
+select
+     product_category_name,
+     product_category_name_english
+from source

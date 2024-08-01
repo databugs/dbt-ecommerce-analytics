@@ -5,5 +5,9 @@ WITH source AS (
     FROM {{ source('raw_data', 'seller') }}
 )
 
-select *
-from source_data
+select
+    seller_id, 
+    seller_zip_code_prefix, 
+    seller_city, 
+    seller_state
+from source
