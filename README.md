@@ -1,4 +1,6 @@
-Welcome to your new dbt project!
+Welcome to the DBT E-commerce Analytics repository! This project is designed to provide a comprehensive suite of dbt models for analyzing ecommerce data. It aims to empower data analysts and engineers with pre-built models to accelerate insights into customer behavior, sales performance, inventory management, and more.
+
+So far, it only covers customer behavior.
 
 ### Using the starter project
 
