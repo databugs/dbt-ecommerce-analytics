@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: demo
-    database: vendease-431114
+    database: db
     schema: demo
     tables:
       - name: orders
