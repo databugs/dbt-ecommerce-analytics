@@ -4,7 +4,7 @@ WITH products AS (
 product_orders AS (
     SELECT
         product_id,
-        sum(1) AS total_orders
+        sum(1) AS total_orders,
         sum(num_items) AS total_quantity,
         SUM(order_value) AS total_revenue
     FROM {{ ref('stg_order_items_agg') }}
@@ -24,4 +24,4 @@ SELECT
     po.total_quantity,
     po.total_revenue
 FROM products p
-LEFT JOIN product_orders po ON p.product_id = po.product_id;
+LEFT JOIN product_orders po ON p.product_id = po.product_id

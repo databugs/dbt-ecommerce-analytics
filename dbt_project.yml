@@ -31,24 +31,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dashboards:
-    # Config indicated by + and applies to all files under models/example/
-    marts:
-      +materialized: table
+    +materialized: table
     staging:
       +materialized: view
-
-
-sources:
-  - name: raw_data
-    database: vendease-431114
-    schema: modmart
-    tables:
-      - name: orders
-      - name: order_items
-      - name: products
-      - name: customers
-      - name: orders
-      - name: product_category
-      - namme: sellers
-      - name: order_payments
-      
+      +schema: staging
+    aggregations:
+      +materialized: table
+      +schema: aggregations
+    mart:
+      +materialized: table
+      +schema: models

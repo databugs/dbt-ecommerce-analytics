@@ -2,7 +2,7 @@
 
 WITH source AS (
     SELECT * 
-    FROM {{ source('raw_data', 'product_category') }}
+    FROM {{ source('demo', 'product_category') }}
 )
 select
      product_category_name,

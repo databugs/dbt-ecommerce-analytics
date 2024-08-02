@@ -2,7 +2,7 @@
 
 WITH source AS (
     SELECT * 
-    FROM {{ source('raw_data', 'order_items') }}
+    FROM {{ source('demo', 'order_items') }}
 )
 select
     order_id,

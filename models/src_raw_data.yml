@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: demo
+    database: vendease-431114
+    schema: demo
+    tables:
+      - name: orders
+      - name: order_items
+      - name: products
+      - name: customers
+      - name: product_category
+      - name: sellers
+      - name: order_payments
